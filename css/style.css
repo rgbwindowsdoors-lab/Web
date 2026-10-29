@@ -108,10 +108,7 @@
 }
 
 /* На маленьких экранах */
-@media (max-width: 1200px) {
-  nav.navbar {
-    flex-wrap: wrap;
-  }
+@media (max-width: 995px) {
     .contact-container {
         position: static; /* Возвращаем в поток */
         margin-top: 20px;
@@ -131,6 +128,31 @@
     }
 }
 
+
+@media (max-width: 995px) {
+  .contact-container {
+    width: auto;
+    margin: 20px 0 0 auto;
+  }
+}
+
+@media (min-width: 996px) and (max-width: 1200px) {
+  nav.navbar {
+    min-height: 110px;
+  }
+
+  .logo {
+    max-width: 250px;
+  }
+
+  .navbar-nav {
+    gap: 10px;
+  }
+
+  .navbar-light .navbar-nav .nav-link {
+    margin-right: 10px;
+  }
+}
 
 .logo {
     width: 100%; /* Make the logo take up the full width of the container */
