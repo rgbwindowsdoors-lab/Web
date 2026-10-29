@@ -108,7 +108,10 @@
 }
 
 /* На маленьких экранах */
-@media (max-width: 995px) {
+@media (max-width: 1200px) {
+  nav.navbar {
+    flex-wrap: wrap;
+  }
     .contact-container {
         position: static; /* Возвращаем в поток */
         margin-top: 20px;
