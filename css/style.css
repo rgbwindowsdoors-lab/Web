@@ -142,15 +142,15 @@
   }
 
   .logo {
-    max-width: 250px;
+    max-width: 250px !important;
   }
 
   .navbar-nav {
-    gap: 10px;
+    gap: 10px !important;
   }
 
   .navbar-light .navbar-nav .nav-link {
-    margin-right: 10px;
+    margin-right: 10px !important;
   }
 }
 
