@@ -1,0 +1,89 @@
+/* RGB Windows & Doors — measurement request form. Uses site colours from css/style.css. */
+.quote-form .form-control,
+.quote-form .form-select {
+  border: 1px solid #d5dbea;
+  border-radius: 0;
+}
+.quote-form .form-control:focus,
+.quote-form .form-select:focus {
+  border-color: var(--primary, #b41111);
+  box-shadow: 0 0 0 .2rem rgba(180, 17, 17, .15);
+}
+/* Labels: darker grey and full opacity so they stay readable when floated (Bootstrap fades them to .65). */
+.quote-form .form-floating > label { color: #4a5262; }
+.quote-form .form-floating > .form-control:focus ~ label,
+.quote-form .form-floating > .form-control:not(:placeholder-shown) ~ label,
+.quote-form .form-floating > .form-select ~ label,
+.quote-form .form-floating > .form-control:-webkit-autofill ~ label { opacity: 1; color: #4a5262; }
+.quote-form .form-control,
+.quote-form .form-select { color: #1f2633; }
+/* Show only errors after a failed submit, no green "valid" marks. */
+.quote-form.was-validated .form-control:valid,
+.quote-form.was-validated .form-select:valid,
+.quote-form.was-validated .form-select:valid:not([multiple]):not([size]) {
+  border-color: #d5dbea;
+  background-image: none;
+  padding-right: .75rem;
+}
+.quote-form.was-validated .form-select:valid,
+.quote-form.was-validated .form-select:valid:not([multiple]):not([size]) {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+  background-position: right .75rem center;
+  background-size: 16px 12px;
+  background-repeat: no-repeat;
+  padding-right: 2.25rem;
+}
+.quote-form.was-validated .form-check-input:valid ~ .form-check-label { color: inherit; }
+.quote-form.was-validated .form-check-input:valid { border-color: rgba(0,0,0,.25); }
+.quote-form textarea.form-control { height: 110px; }
+.quote-form .form-check-input:checked {
+  background-color: var(--primary, #b41111);
+  border-color: var(--primary, #b41111);
+}
+.quote-form .form-check-label { font-size: 14px; color: #3d4555; }
+.quote-form .form-check-label a { color: var(--dark, #17224D); text-decoration: underline; }
+.quote-form .quote-form__optional { font-weight: 400; font-size: .85em; }
+.quote-form .quote-form__trap {
+  position: absolute !important; left: -9999px; width: 1px; height: 1px; overflow: hidden;
+}
+.quote-form .quote-form__message {
+  margin: 0;
+  padding: 12px 16px;
+  background: #fdecec;
+  border-left: 4px solid var(--primary, #b41111);
+  color: #5a0b0b;
+  font-size: 15px;
+}
+.quote-form .quote-form__message a { color: inherit; font-weight: 600; }
+/* Benefits list with small brand-red check marks (pure CSS, no icon font needed). */
+.quote-form-benefits li {
+  position: relative;
+  padding-left: 28px;
+  margin-bottom: 8px;
+  color: #3d4555;
+}
+.quote-form-benefits li::before {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: .3em;
+  width: 7px;
+  height: 12px;
+  border: solid var(--primary, #b41111);
+  border-width: 0 2.5px 2.5px 0;
+  transform: rotate(45deg);
+}
+.quote-form-intro p { color: #3d4555; }
+
+/* Phones: tighter text block so the fields come sooner. */
+@media (max-width: 991.98px) {
+  #quote.container-xxl { padding-top: 1.5rem !important; }
+  #quote .row.g-5 { --bs-gutter-y: 1.25rem; }
+  .quote-form-intro h6 { margin-bottom: .25rem; font-size: .8rem; }
+  .quote-form-intro h1 { font-size: 1.75rem; line-height: 1.2; margin-bottom: .75rem !important; }
+  .quote-form-intro p { font-size: 1rem; line-height: 1.5; margin-bottom: .75rem !important; }
+  .quote-form-benefits { margin-bottom: .75rem !important; }
+  .quote-form-benefits li { margin-bottom: 4px; font-size: 1rem; }
+  .quote-form-call { font-size: 1rem; }
+}
+#quote { scroll-margin-top: 20px; }

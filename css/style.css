@@ -18,6 +18,13 @@
     z-index: 99;
 }
 
+/* Phones: hide the floating "back to top" button so it never covers form fields. */
+@media (max-width: 767.98px) {
+    .back-to-top {
+        display: none !important;
+    }
+}
+
 .logoContainer {
     display: flex; /* Используем флексбокс */
     align-items: center; /* Выравниваем элементы по вертикали */
